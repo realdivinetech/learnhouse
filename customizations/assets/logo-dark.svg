@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 50" fill="none">
+  <rect width="200" height="50" rx="6" fill="#F3F4F6"/>
+  <text x="16" y="34" font-family="system-ui, sans-serif" font-size="20" font-weight="700" fill="#ee6c4d">DB</text>
+  <text x="46" y="34" font-family="system-ui, sans-serif" font-size="12" fill="#1F2937">DigitalBridge</text>
+</svg>

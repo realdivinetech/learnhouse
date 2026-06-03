@@ -1,4 +1,5 @@
 import '../styles/globals.css'
+import '../styles/branding-overrides.css'
 import { getLEARNHOUSE_TOP_DOMAIN_VAL, getLEARNHOUSE_TELEMETRY_DISABLED_VAL } from '@services/config/config'
 import Script from 'next/script'
 import Providers from '@components/Providers'

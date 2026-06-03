@@ -16,6 +16,15 @@ WORKDIR /app
 COPY --from=frontend-deps /app/node_modules ./node_modules
 COPY apps/web .
 
+# Copy DigitalBridge customization layer
+COPY customizations/ ./customizations/
+RUN mkdir -p ./styles && \
+    cp ./customizations/styles/branding-overrides.css ./styles/ && \
+    mkdir -p ./components/Admin/BrandingCustomization && \
+    cp ./customizations/admin-components/*.tsx ./components/Admin/BrandingCustomization/ && \
+    mkdir -p ./public/custom-assets && \
+    cp ./customizations/assets/* ./public/custom-assets/
+
 # Disable telemetry during build
 ENV NEXT_TELEMETRY_DISABLED=1
 
