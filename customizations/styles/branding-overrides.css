@@ -5,13 +5,13 @@
 
 /* CSS Custom Properties (Variables) for easy theme management */
 :root {
-  --db-primary: #4F46E5;
-  --db-primary-dark: #4338CA;
-  --db-primary-light: #6366F1;
+  --db-primary: #ee6c4d;
+  --db-primary-dark: #d4563c;
+  --db-primary-light: #f08a6f;
   
-  --db-secondary: #EC4899;
-  --db-secondary-dark: #DB2777;
-  --db-secondary-light: #F472B6;
+  --db-secondary: #374151;
+  --db-secondary-dark: #1F2937;
+  --db-secondary-light: #6B7280;
   
   --db-accent: #10B981;
   --db-accent-dark: #059669;
@@ -42,7 +42,7 @@ nav,
 [class*="navbar"],
 [class*="header"] {
   background: linear-gradient(to right, var(--db-primary), var(--db-secondary));
-  box-shadow: 0 2px 8px rgba(79, 70, 229, 0.1);
+  box-shadow: 0 2px 8px rgba(238, 108, 77, 0.15);
 }
 
 header a,
@@ -85,7 +85,7 @@ button[type="submit"]:hover,
 a[class*="btn-primary"]:hover {
   background-color: var(--db-primary-dark);
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+  box-shadow: 0 4px 12px rgba(238, 108, 77, 0.3);
 }
 
 button[type="submit"]:active,
@@ -159,7 +159,7 @@ select:focus,
 [class*="select"]:focus {
   outline: none;
   border-color: var(--db-primary);
-  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+  box-shadow: 0 0 0 3px rgba(238, 108, 77, 0.15);
   transition: all 0.2s ease;
 }
 
@@ -186,7 +186,7 @@ label {
 [class*="card"]:hover,
 .course-card:hover,
 .lesson-card:hover {
-  box-shadow: 0 10px 25px rgba(79, 70, 229, 0.1);
+  box-shadow: 0 10px 25px rgba(238, 108, 77, 0.15);
   transform: translateY(-2px);
 }
 
@@ -461,8 +461,8 @@ aside a.active,
 /* High contrast mode support */
 @media (prefers-contrast: more) {
   :root {
-    --db-primary: #1a3db3;
-    --db-secondary: #b71c1c;
+    --db-primary: #c44a2e;
+    --db-secondary: #111827;
     --db-accent: #006b3d;
   }
 }

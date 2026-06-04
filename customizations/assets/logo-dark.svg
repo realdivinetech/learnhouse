@@ -1,5 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 50" fill="none">
-  <rect width="200" height="50" rx="6" fill="#F3F4F6"/>
-  <text x="16" y="34" font-family="system-ui, sans-serif" font-size="20" font-weight="700" fill="#ee6c4d">DB</text>
-  <text x="46" y="34" font-family="system-ui, sans-serif" font-size="12" fill="#1F2937">DigitalBridge</text>
+  <!-- Icon badge -->
+  <rect x="2" y="2" width="46" height="46" rx="10" fill="#ee6c4d"/>
+  <text x="16" y="34" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="800" fill="#fff" letter-spacing="1">DB</text>
+  <!-- Wordmark -->
+  <text x="60" y="26" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="700" fill="#fff" letter-spacing="0.5">DigitalBridge</text>
+  <text x="60" y="40" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="400" fill="rgba(255,255,255,0.6)" letter-spacing="3">LEARN</text>
 </svg>

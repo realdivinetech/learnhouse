@@ -40,8 +40,8 @@ export function BrandingSettings({ orgId, onSave }: BrandingSettingsProps) {
     siteName: 'DigitalBridge Learn',
     siteDescription: 'DigitalBridge - Hybrid Learning Platform',
     contactEmail: 'support@digitalbridge.ng',
-    primaryColor: '#4F46E5',
-    secondaryColor: '#EC4899',
+    primaryColor: '#ee6c4d',
+    secondaryColor: '#374151',
     accentColor: '#10B981',
     footerText: '© 2026 DigitalBridge. All rights reserved.',
     footerLinks: [
