@@ -52,12 +52,12 @@ export default function EELicenseError({ error }: { error: unknown }) {
               <ul className="mt-2 space-y-1 list-disc list-inside leading-relaxed">
                 <li>
                   For SaaS deployments: confirm{' '}
-                  <code className="font-mono">LEARNHOUSE_SAAS=true</code> is set in the API
+                  <code className="font-mono">DigitalBridge_SAAS=true</code> is set in the API
                   environment. SaaS short-circuits the license check.
                 </li>
                 <li>
                   For self-hosted EE: confirm{' '}
-                  <code className="font-mono">LEARNHOUSE_LICENSE_KEY</code> is set and the
+                  <code className="font-mono">DigitalBridge_LICENSE_KEY</code> is set and the
                   license server (or grace window) is reachable.
                 </li>
                 <li>

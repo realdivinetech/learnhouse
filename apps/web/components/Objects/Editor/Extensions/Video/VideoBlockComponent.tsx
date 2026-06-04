@@ -15,7 +15,7 @@ import { useLHSession } from '@components/Contexts/LHSessionContext'
 import { constructAcceptValue } from '@/lib/constants'
 import { cn } from '@/lib/utils'
 import Modal from '@components/Objects/StyledElements/Modal/Modal'
-import LearnHousePlayer from '@components/Objects/Activities/Video/LearnHousePlayer'
+import DigitalBridgePlayer from '@components/Objects/Activities/Video/DigitalBridgePlayer'
 import { useTranslation } from 'react-i18next'
 
 const SUPPORTED_FILES = constructAcceptValue(['webm', 'mp4'])
@@ -270,7 +270,7 @@ function VideoBlockComponent(props: ExtendedNodeViewProps) {
               }}
             >
               <div className="relative group">
-                <LearnHousePlayer src={videoUrl} />
+                <DigitalBridgePlayer src={videoUrl} />
                 <div className="absolute top-2 right-2 z-40 flex gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
                   <button
                     onClick={handleExpand}
@@ -293,7 +293,7 @@ function VideoBlockComponent(props: ExtendedNodeViewProps) {
           minHeight="lg"
           dialogContent={
             <div className="w-full">
-              <LearnHousePlayer
+              <DigitalBridgePlayer
                 key={isModalOpen ? videoUrl : undefined}
                 src={videoUrl}
                 details={{ autoplay: true }}

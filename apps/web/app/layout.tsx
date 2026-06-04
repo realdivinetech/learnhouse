@@ -1,12 +1,12 @@
 import '../styles/globals.css'
 import '../styles/branding-overrides.css'
-import { getLEARNHOUSE_TOP_DOMAIN_VAL, getLEARNHOUSE_TELEMETRY_DISABLED_VAL } from '@services/config/config'
+import { getDigitalBridge_TOP_DOMAIN_VAL, getDigitalBridge_TELEMETRY_DISABLED_VAL } from '@services/config/config'
 import Script from 'next/script'
 import Providers from '@components/Providers'
 import { Wix_Madefor_Text } from 'next/font/google'
 
-const isDevEnv = getLEARNHOUSE_TOP_DOMAIN_VAL() === 'localhost'
-const isTelemetryDisabled = getLEARNHOUSE_TELEMETRY_DISABLED_VAL() === 'true'
+const isDevEnv = getDigitalBridge_TOP_DOMAIN_VAL() === 'localhost'
+const isTelemetryDisabled = getDigitalBridge_TELEMETRY_DISABLED_VAL() === 'true'
 
 const wixMadeforText = Wix_Madefor_Text({
   subsets: ['latin'],

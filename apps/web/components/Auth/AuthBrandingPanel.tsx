@@ -2,7 +2,7 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import learnhouseIcon from 'public/learnhouse_bigicon_1.png'
+import DigitalBridgeIcon from 'public/DigitalBridge_bigicon_1.png'
 import { getOrgLogoMediaDirectory, getOrgAuthBackgroundMediaDirectory } from '@services/media/media'
 import { getUriWithOrg } from '@services/config/config'
 import { cn } from '@/lib/utils'
@@ -25,10 +25,10 @@ export default function AuthBrandingPanel({ org, welcomeText }: AuthBrandingPane
     unsplash_photographer_url = '',
     unsplash_photo_url = '',
   } = authBranding
-  const UNSPLASH_UTM = '?utm_source=LearnHouse&utm_medium=referral'
+  const UNSPLASH_UTM = '?utm_source=DigitalBridge&utm_medium=referral'
   const withUtm = (url: string) => (url ? `${url}${UNSPLASH_UTM}` : '')
 
-  // Check if org has enterprise plan - hide LearnHouse branding for enterprise users
+  // Check if org has enterprise plan - hide DigitalBridge branding for enterprise users
   // In OSS mode, always show branding regardless of plan
   const plan = usePlan()
   const isEnterprise = plan === 'enterprise'
@@ -74,13 +74,13 @@ export default function AuthBrandingPanel({ org, welcomeText }: AuthBrandingPane
 
       {/* Content */}
       <div className="relative z-10 flex flex-col h-full p-10">
-        {/* Top bar with LearnHouse lrn.svg logo - hidden for enterprise users */}
+        {/* Top bar with DigitalBridge lrn.svg logo - hidden for enterprise users */}
         {!isEnterprise && (
           <div className="login-topbar">
-            <Link prefetch href="https://learnhouse.app" target="_blank">
+            <Link prefetch href="https://digitalbridge.ng" target="_blank">
               <img
                 src="/lrn.svg"
-                alt="LearnHouse"
+                alt="DigitalBridge"
                 width={30}
                 height={30}
                 className={cn(
@@ -108,14 +108,14 @@ export default function AuthBrandingPanel({ org, welcomeText }: AuthBrandingPane
                     className="w-full h-full object-contain p-3"
                   />
                 ) : (
-                  <Image
-                    quality={100}
-                    width={96}
-                    height={96}
-                    src={learnhouseIcon}
-                    alt="LearnHouse"
-                    className="object-contain"
-                  />
+                    <Image
+                      quality={100}
+                      width={96}
+                      height={96}
+                      src={DigitalBridgeIcon}
+                      alt="DigitalBridge"
+                      className="object-contain"
+                    />
                 )}
               </div>
             </Link>

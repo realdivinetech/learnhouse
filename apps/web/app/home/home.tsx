@@ -73,7 +73,7 @@ function HomeClient() {
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/lrn.svg"
-                alt="LearnHouse"
+                alt="DigitalBridge"
                 width={44}
                 height={44}
                 className="opacity-90"
@@ -233,13 +233,13 @@ function HomeClient() {
 
             {/* Footer */}
             <a
-              href="https://learnhouse.app"
+              href="https://DigitalBridge.app"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-10 flex items-center gap-1.5 text-[11px] text-black/30 hover:text-black/60 transition-colors"
             >
               <span>{t('common.powered_by', { defaultValue: 'Powered by' })}</span>
-              <span className="font-semibold tracking-tight text-black/50 group-hover:text-black/70">LearnHouse</span>
+              <span className="font-semibold tracking-tight text-black/50 group-hover:text-black/70">DigitalBridge</span>
             </a>
           </div>
         </div>

@@ -40,17 +40,17 @@ interface CourseSelection {
   include: boolean
 }
 
-interface LearnHouseCourseImportProps {
+interface DigitalBridgeCourseImportProps {
   orgId: number
   orgslug: string
   closeModal: () => void
 }
 
-function LearnHouseCourseImport({
+function DigitalBridgeCourseImport({
   orgId,
   orgslug,
   closeModal,
-}: LearnHouseCourseImportProps) {
+}: DigitalBridgeCourseImportProps) {
   const { t } = useTranslation()
   const session = useLHSession() as any
   const access_token = session?.data?.tokens?.access_token
@@ -325,7 +325,7 @@ function LearnHouseCourseImport({
                     </div>
                     <div className="space-y-1">
                       <p className="font-medium text-gray-700">{t('courses.import.click_to_upload')}</p>
-                      <p className="text-sm text-gray-400">{t('courses.import.learnhouse_format')}</p>
+                      <p className="text-sm text-gray-400">{t('courses.import.DigitalBridge_format')}</p>
                     </div>
                   </>
                 )}
@@ -342,7 +342,7 @@ function LearnHouseCourseImport({
 
             {/* Info Box */}
             <div className="bg-blue-50 border border-blue-100 p-4 rounded-lg">
-              <p className="text-sm text-blue-700">{t('courses.import.learnhouse_info')}</p>
+              <p className="text-sm text-blue-700">{t('courses.import.DigitalBridge_info')}</p>
             </div>
 
             {/* Submit Button */}
@@ -651,4 +651,4 @@ function LearnHouseCourseImport({
   )
 }
 
-export default LearnHouseCourseImport
+export default DigitalBridgeCourseImport

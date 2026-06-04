@@ -201,7 +201,7 @@ function DashLeftMenu() {
           ) : (
             <img
               src="/lrn-dash.svg"
-              alt="Learnhouse logo"
+              alt="DigitalBridge logo"
               className="h-8 w-8"
             />
           )}
@@ -845,7 +845,7 @@ function DashLeftMenu() {
                 <HoverMenuSeparator />
                 <HoverMenuItem asChild>
                   <a
-                    href="https://docs.learnhouse.app"
+                    href="https://docs.DigitalBridge.app"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 px-3 py-2 text-sm text-white/70 hover:text-white hover:bg-white/[0.08] cursor-pointer transition-colors"
@@ -856,7 +856,7 @@ function DashLeftMenu() {
                 </HoverMenuItem>
                 <HoverMenuItem asChild>
                   <a
-                    href="https://learnhouse.app"
+                    href="https://DigitalBridge.app"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 px-3 py-2 text-sm text-white/70 hover:text-white hover:bg-white/[0.08] cursor-pointer transition-colors"
@@ -867,7 +867,7 @@ function DashLeftMenu() {
                 </HoverMenuItem>
                 <HoverMenuItem asChild>
                   <a
-                    href="https://discord.gg/learnhouse"
+                    href="https://discord.gg/DigitalBridge"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 px-3 py-2 text-sm text-white/70 hover:text-white hover:bg-white/[0.08] cursor-pointer transition-colors"

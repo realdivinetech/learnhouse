@@ -24,7 +24,7 @@ function toEmbedUrl(url: string): string {
 
   // Figma → embed host
   if (/^https?:\/\/(www\.)?figma\.com\//.test(url)) {
-    return `https://www.figma.com/embed?embed_host=learnhouse&url=${encodeURIComponent(url)}`
+    return `https://www.figma.com/embed?embed_host=DigitalBridge&url=${encodeURIComponent(url)}`
   }
 
   // Loom → /share/ to /embed/

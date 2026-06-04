@@ -1,6 +1,6 @@
 'use client'
 import React, { useState } from 'react'
-import LearnHouseSpinner from '@components/Objects/Loaders/LearnHouseSpinner'
+import DigitalBridgeSpinner from '@components/Objects/Loaders/DigitalBridgeSpinner'
 import { Package } from 'lucide-react'
 import { updateActivity } from '@services/courses/activities'
 import { useLHSession } from '@components/Contexts/LHSessionContext'
@@ -83,7 +83,7 @@ function EditScormActivityModal({ activity, courseUuid, orgSlug, onClose }: Edit
           className="inline-flex items-center justify-center h-9 px-5 text-sm font-medium text-white bg-black rounded-lg hover:bg-gray-800 transition-colors disabled:opacity-50"
         >
           {isSubmitting ? (
-            <LearnHouseSpinner size={18} className="[&>div]:border-t-white" />
+            <DigitalBridgeSpinner size={18} className="[&>div]:border-t-white" />
           ) : (
             'Save changes'
           )}

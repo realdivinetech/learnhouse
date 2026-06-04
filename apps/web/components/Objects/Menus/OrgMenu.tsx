@@ -157,12 +157,12 @@ export const OrgMenu = (props: any) => {
                   {org?.logo_image ? (
                     <img
                       src={`${getOrgLogoMediaDirectory(org.org_uuid, org?.logo_image)}`}
-                      alt="Learnhouse"
+                      alt="DigitalBridge"
                       style={{ width: 'auto', height: '100%' }}
                       className="rounded-md"
                     />
                   ) : (
-                    <LearnHouseLogo logoFilter={colors.logoFilter} />
+                    <DigitalBridgeLogo logoFilter={colors.logoFilter} />
                   )}
                 </div>
               </Link>
@@ -309,7 +309,7 @@ export const OrgMenu = (props: any) => {
                     <DropdownMenuSeparator />
                     <DropdownMenuItem asChild>
                       <a
-                        href="https://docs.learnhouse.app"
+                        href="https://docs.DigitalBridge.app"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex items-center gap-2"
@@ -320,7 +320,7 @@ export const OrgMenu = (props: any) => {
                     </DropdownMenuItem>
                     <DropdownMenuItem asChild>
                       <a
-                        href="https://learnhouse.app"
+                        href="https://DigitalBridge.app"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex items-center gap-2"
@@ -331,7 +331,7 @@ export const OrgMenu = (props: any) => {
                     </DropdownMenuItem>
                     <DropdownMenuItem asChild>
                       <a
-                        href="https://discord.gg/learnhouse"
+                        href="https://discord.gg/DigitalBridge"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex items-center gap-2"
@@ -551,11 +551,11 @@ const CopilotMenuButton = ({
   )
 }
 
-const LearnHouseLogo = ({ logoFilter }: { logoFilter: string }) => {
+const DigitalBridgeLogo = ({ logoFilter }: { logoFilter: string }) => {
   return (
     <Image
       src="/lrn-text.svg"
-      alt="LearnHouse logo"
+      alt="DigitalBridge logo"
       width={133}
       height={40}
       style={{ height: 'auto', filter: logoFilter }}

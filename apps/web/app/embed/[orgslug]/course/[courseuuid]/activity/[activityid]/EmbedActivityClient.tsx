@@ -3,7 +3,7 @@
 import React, { Suspense, lazy, useState, useEffect, useRef, useCallback } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useSearchParams } from 'next/navigation'
-import { getLEARNHOUSE_DOMAIN_VAL, getLEARNHOUSE_HTTP_PROTOCOL_VAL } from '@services/config/config'
+import { getDigitalBridge_DOMAIN_VAL, getDigitalBridge_HTTP_PROTOCOL_VAL } from '@services/config/config'
 import Image from 'next/image'
 import { CourseContext, CourseDispatchContext } from '@components/Contexts/CourseContext'
 import { useActivity } from '@/hooks/queries/useActivity'
@@ -121,7 +121,7 @@ function useContentReady(activityType: string, activitySubType?: string) {
 function EmbedActivityClient({ activityId, courseuuid, orgslug, bgcolor }: EmbedActivityClientProps) {
   const { t } = useTranslation()
   const searchParams = useSearchParams()
-  const showLearnHouseLogo = searchParams.get('showlearnhouselogo') !== 'false'
+  const showDigitalBridgeLogo = searchParams.get('showDigitalBridgelogo') !== 'false'
   const textColor = searchParams.get('textcolor')
 
   const { data: activity, isLoading: activityLoading } = useActivity(activityId)
@@ -137,10 +137,10 @@ function EmbedActivityClient({ activityId, courseuuid, orgslug, bgcolor }: Embed
     const cleanCourseUuid = (course?.course_uuid ?? courseuuid).replace('course_', '')
     const path = `/course/${cleanCourseUuid}/activity/${activityId}`
     // Always build an absolute org URL — the embed may be served from the main app domain
-    // (e.g. app.learnhouse.io), so a relative path would resolve to the wrong host.
+    // (e.g. app.DigitalBridge.io), so a relative path would resolve to the wrong host.
     if (typeof window !== 'undefined' && orgslug) {
-      const domain = getLEARNHOUSE_DOMAIN_VAL()
-      const protocol = getLEARNHOUSE_HTTP_PROTOCOL_VAL()
+      const domain = getDigitalBridge_DOMAIN_VAL()
+      const protocol = getDigitalBridge_HTTP_PROTOCOL_VAL()
       if (domain && domain !== 'localhost') {
         return `${protocol}${orgslug}.${domain}${path}`
       }
@@ -168,8 +168,8 @@ function EmbedActivityClient({ activityId, courseuuid, orgslug, bgcolor }: Embed
         <div className="bg-white rounded-2xl nice-shadow p-8 max-w-md w-full text-center">
           <div className="mb-6">
             <Image
-              src="/learnhouse_bigicon.png"
-              alt="LearnHouse"
+              src="/DigitalBridge_bigicon.png"
+              alt="DigitalBridge"
               width={64}
               height={64}
               className="mx-auto"
@@ -190,7 +190,7 @@ function EmbedActivityClient({ activityId, courseuuid, orgslug, bgcolor }: Embed
             {t('embed.visit_activity')}
           </a>
         </div>
-        {showLearnHouseLogo && <PoweredByBadge activityUrl={getActivityUrl()} />}
+        {showDigitalBridgeLogo && <PoweredByBadge activityUrl={getActivityUrl()} />}
       </div>
     )
   }
@@ -260,7 +260,7 @@ function EmbedActivityClient({ activityId, courseuuid, orgslug, bgcolor }: Embed
       >
         {renderActivityContent()}
       </div>
-      {showLearnHouseLogo && ready && <PoweredByBadge activityUrl={getActivityUrl()} />}
+      {showDigitalBridgeLogo && ready && <PoweredByBadge activityUrl={getActivityUrl()} />}
     </div>
   )
 }
@@ -278,7 +278,7 @@ function PoweredByBadge({ activityUrl }: { activityUrl: string }) {
       >
         <Image
           src="/lrn.svg"
-          alt="LearnHouse"
+          alt="DigitalBridge"
           width={20}
           height={20}
         />

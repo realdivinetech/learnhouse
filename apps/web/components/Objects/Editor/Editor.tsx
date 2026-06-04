@@ -12,7 +12,7 @@ const ToolbarButtons = dynamic(
 import { motion } from 'motion/react'
 import Image from 'next/image'
 import { DividerVerticalIcon, SlashIcon } from '@radix-ui/react-icons'
-import learnhouseAI_icon from 'public/learnhouse_ai_simple.png'
+import DigitalBridgeAI_icon from 'public/DigitalBridge_ai_simple.png'
 import {
   AIEditorStateTypes,
   useAIEditor,
@@ -329,7 +329,7 @@ function Editor(props: Editor) {
             <div className="activity-editor-doc-section">
               <div className="activity-editor-info-wrapper">
                 <Link href="/">
-                  <EditorLearnHouseLogo />
+                  <EditorDigitalBridgeLogo />
                 </Link>
                 <Link target="_blank" href={`/course/${course_uuid}`}>
                   <img
@@ -374,7 +374,7 @@ function Editor(props: Editor) {
                         <Image
                           className=""
                           width={20}
-                          src={learnhouseAI_icon}
+                          src={DigitalBridgeAI_icon}
                           alt=""
                         />
                       </i>{' '}
@@ -389,7 +389,7 @@ function Editor(props: Editor) {
                         <Image
                           className="opacity-50 grayscale"
                           width={20}
-                          src={learnhouseAI_icon}
+                          src={DigitalBridgeAI_icon}
                           alt=""
                         />
                       </i>
@@ -566,7 +566,7 @@ const logoAnimations = [
   },
 ]
 
-const EditorLearnHouseLogo = () => {
+const EditorDigitalBridgeLogo = () => {
   const [animation] = React.useState(
     () => logoAnimations[Math.floor(Math.random() * logoAnimations.length)]
   )
@@ -580,7 +580,7 @@ const EditorLearnHouseLogo = () => {
       >
         <Image
           src="/lrn.svg"
-          alt="LearnHouse"
+          alt="DigitalBridge"
           width={14}
           height={14}
           className="invert"

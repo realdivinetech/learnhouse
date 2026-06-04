@@ -5,7 +5,7 @@ import { useSearchParams, useRouter } from 'next/navigation'
 import { Loader2, AlertTriangle, ShieldAlert } from 'lucide-react'
 import Link from 'next/link'
 import { useAuth, validateOAuthState } from '@components/Contexts/AuthContext'
-import { getLEARNHOUSE_DOMAIN_VAL } from '@services/config/config'
+import { getDigitalBridge_DOMAIN_VAL } from '@services/config/config'
 
 export default function GoogleCallbackPage() {
   const searchParams = useSearchParams()
@@ -41,7 +41,7 @@ export default function GoogleCallbackPage() {
 
       // Check if we need to bounce to a custom domain origin.
       // When OAuth was initiated from a custom domain (e.g., learn.mozilla.org),
-      // Google redirects to the main domain (dev.learnhouse.io). We detect this
+      // Google redirects to the main domain (dev.DigitalBridge.io). We detect this
       // via returnOrigin in the state and bounce the code+state to the custom domain
       // so CSRF validation and cookie-setting happen on the correct origin.
       try {
@@ -88,7 +88,7 @@ export default function GoogleCallbackPage() {
 
       try {
         // redirect_uri must always match what was sent during authorization (main domain)
-        const domain = getLEARNHOUSE_DOMAIN_VAL()
+        const domain = getDigitalBridge_DOMAIN_VAL()
         const oauthRedirectUri = `${window.location.protocol}//${domain}/auth/callback/google`
 
         // Exchange code for tokens with our backend
