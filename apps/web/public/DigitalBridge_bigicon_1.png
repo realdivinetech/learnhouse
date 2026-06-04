@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 50" fill="none">
+  <rect x="2" y="2" width="46" height="46" rx="10" fill="#1F2937"/>
+  <path d="M16 14h-4v22h4V14zM22 14h-2l8 12-8 12h2l8-12-8-12zM28 14v22h4V20l6 10 6-10v16h4V14h-2l-8 14-8-14h-2z" fill="#ee6c4d"/>
+  <text x="60" y="26" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700" fill="#1F2937" letter-spacing="0.5">DigitalBridge</text>
+  <text x="60" y="40" font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="500" fill="#6B7280" letter-spacing="3">LEARN</text>
+</svg>
