@@ -123,6 +123,14 @@ export const getLEARNHOUSE_TOP_DOMAIN_VAL = getLEARNHOUSE_TOP_DOMAIN
 export const getLEARNHOUSE_TELEMETRY_DISABLED_VAL = getLEARNHOUSE_TELEMETRY_DISABLED
 export const getLEARNHOUSE_PLATFORM_URL_VAL = getLEARNHOUSE_PLATFORM_URL
 
+// DigitalBridge aliases for compatibility with customized frontend code
+export const getDigitalBridge_HTTP_PROTOCOL_VAL = getLEARNHOUSE_HTTP_PROTOCOL
+export const getDigitalBridge_BACKEND_URL_VAL = getLEARNHOUSE_BACKEND_URL
+export const getDigitalBridge_DOMAIN_VAL = getLEARNHOUSE_DOMAIN
+export const getDigitalBridge_TOP_DOMAIN_VAL = getLEARNHOUSE_TOP_DOMAIN
+export const getDigitalBridge_TELEMETRY_DISABLED_VAL = getLEARNHOUSE_TELEMETRY_DISABLED
+export const getDigitalBridge_PLATFORM_URL_VAL = getLEARNHOUSE_PLATFORM_URL
+
 // Export constants for backward compatibility
 // These are computed once at module load, but getConfig uses runtime values
 // For middleware/proxy (where runtime is critical), use the getter functions instead
