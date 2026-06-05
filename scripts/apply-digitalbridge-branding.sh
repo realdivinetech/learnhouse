@@ -15,18 +15,27 @@ WEB_DIR="$(cd "$(dirname "$0")/.." && pwd)/apps/web"
 info()  { echo -e "\033[0;32m[INFO]\033[0m $1"; }
 warn()  { echo -e "\033[1;33m[WARN]\033[0m $1"; }
 
-# ── 1. Replace SVG logos ────────────────────────────────────────────────
-info "Replacing logo SVGs..."
-cp -f customizations/assets/logo.svg "$WEB_DIR/public/lrn-dash.svg"
+# ── 1. Replace Assets ────────────────────────────────────────────────
+info "Replacing assets..."
+cp -f customizations/assets/DigitalBridge_bigicon.png "$WEB_DIR/public/learnhouse_bigicon.png"
+cp -f customizations/assets/DigitalBridge_bigicon_1.png "$WEB_DIR/public/learnhouse_bigicon_1.png"
+cp -f customizations/assets/DigitalBridge_ai_simple.png "$WEB_DIR/public/learnhouse_ai_simple.png"
+cp -f customizations/assets/DigitalBridge_ai_simple_colored.png "$WEB_DIR/public/learnhouse_ai_simple_colored.png"
+cp -f customizations/assets/DigitalBridge_ai_black_logo.png "$WEB_DIR/public/learnhouse_ai_black_logo.png"
 cp -f customizations/assets/logo.svg "$WEB_DIR/public/lrn.svg"
+cp -f customizations/assets/logo.svg "$WEB_DIR/public/lrn-dash.svg"
 cp -f customizations/assets/logo.svg "$WEB_DIR/public/lrn-text.svg"
-cp -f customizations/assets/logo.svg "$WEB_DIR/public/dashLogo.png"
-cp -f customizations/assets/logo.svg "$WEB_DIR/public/black_logo.png"
+cp -f customizations/assets/logo.svg "$WEB_DIR/public/learnhouse_logo.png"
+cp -f customizations/assets/logo.svg "$WEB_DIR/public/learnhouse_icon.png"
 
 # ── 2. Replace favicon ──────────────────────────────────────────────────
 info "Replacing favicon..."
 cp -f customizations/assets/favicon.svg "$WEB_DIR/public/favicon.ico"
 cp -f customizations/assets/favicon.svg "$WEB_DIR/public/favicon.svg"
+
+cp -f customizations/assets/logo.svg "$WEB_DIR/public/dashLogo.png"
+cp -f customizations/assets/logo.svg "$WEB_DIR/public/black_logo.png"
+cp -f customizations/assets/logo.svg "$WEB_DIR/public/learnhouse_text_white.png"
 
 # ── 3. Update theme colors in globals.css ───────────────────────────────
 info "Updating theme colors..."

@@ -81,7 +81,8 @@ export default function AuthBrandingTab() {
       }
       await updateOrgAuthBrandingConfig(org.id, config, access_token)
       await revalidateTags(['organizations'], org.slug)
-      queryClient.invalidateQueries({ queryKey: queryKeys.org.detail(org.slug) })
+      await queryClient.invalidateQueries({ queryKey: queryKeys.org.detail(org.slug) })
+      await queryClient.refetchQueries({ queryKey: queryKeys.org.detail(org.slug) })
       toast.success(t('dashboard.organization.auth_branding.save_success'), { id: loadingToast })
       router.refresh()
     } catch (err) {
