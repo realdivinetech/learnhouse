@@ -10,32 +10,37 @@
 
 set -euo pipefail
 
-WEB_DIR="$(cd "$(dirname "$0")/.." && pwd)/apps/web"
+SCRIPTS_DIR="$(cd "$(dirname "$0")" && pwd)"
+FORK_DIR="$(cd "$SCRIPTS_DIR/.." && pwd)"
+WEB_DIR="$FORK_DIR/apps/web"
+ASSETS_DIR="$FORK_DIR/customizations/assets"
+STYLES_DIR="$FORK_DIR/customizations/styles"
+ADMIN_COMPONENTS_DIR="$FORK_DIR/customizations/admin-components"
 
 info()  { echo -e "\033[0;32m[INFO]\033[0m $1"; }
 warn()  { echo -e "\033[1;33m[WARN]\033[0m $1"; }
 
 # ── 1. Replace Assets ────────────────────────────────────────────────
 info "Replacing assets..."
-cp -f customizations/assets/DigitalBridge_bigicon.png "$WEB_DIR/public/learnhouse_bigicon.png"
-cp -f customizations/assets/DigitalBridge_bigicon_1.png "$WEB_DIR/public/learnhouse_bigicon_1.png"
-cp -f customizations/assets/DigitalBridge_ai_simple.png "$WEB_DIR/public/learnhouse_ai_simple.png"
-cp -f customizations/assets/DigitalBridge_ai_simple_colored.png "$WEB_DIR/public/learnhouse_ai_simple_colored.png"
-cp -f customizations/assets/DigitalBridge_ai_black_logo.png "$WEB_DIR/public/learnhouse_ai_black_logo.png"
-cp -f customizations/assets/logo.svg "$WEB_DIR/public/lrn.svg"
-cp -f customizations/assets/logo.svg "$WEB_DIR/public/lrn-dash.svg"
-cp -f customizations/assets/logo.svg "$WEB_DIR/public/lrn-text.svg"
-cp -f customizations/assets/logo.svg "$WEB_DIR/public/learnhouse_logo.png"
-cp -f customizations/assets/logo.svg "$WEB_DIR/public/learnhouse_icon.png"
+cp -f "$ASSETS_DIR/DigitalBridge_bigicon.png" "$WEB_DIR/public/learnhouse_bigicon.png"
+cp -f "$ASSETS_DIR/DigitalBridge_bigicon_1.png" "$WEB_DIR/public/learnhouse_bigicon_1.png"
+cp -f "$ASSETS_DIR/DigitalBridge_ai_simple.png" "$WEB_DIR/public/learnhouse_ai_simple.png"
+cp -f "$ASSETS_DIR/DigitalBridge_ai_simple_colored.png" "$WEB_DIR/public/learnhouse_ai_simple_colored.png"
+cp -f "$ASSETS_DIR/DigitalBridge_ai_black_logo.png" "$WEB_DIR/public/learnhouse_ai_black_logo.png"
+cp -f "$ASSETS_DIR/logo.svg" "$WEB_DIR/public/lrn.svg"
+cp -f "$ASSETS_DIR/logo.svg" "$WEB_DIR/public/lrn-dash.svg"
+cp -f "$ASSETS_DIR/logo.svg" "$WEB_DIR/public/lrn-text.svg"
+cp -f "$ASSETS_DIR/logo.svg" "$WEB_DIR/public/learnhouse_logo.png"
+cp -f "$ASSETS_DIR/logo.svg" "$WEB_DIR/public/learnhouse_icon.png"
 
 # ── 2. Replace favicon ──────────────────────────────────────────────────
 info "Replacing favicon..."
-cp -f customizations/assets/favicon.svg "$WEB_DIR/public/favicon.ico"
-cp -f customizations/assets/favicon.svg "$WEB_DIR/public/favicon.svg"
+cp -f "$ASSETS_DIR/favicon.svg" "$WEB_DIR/public/favicon.ico"
+cp -f "$ASSETS_DIR/favicon.svg" "$WEB_DIR/public/favicon.svg"
 
-cp -f customizations/assets/logo.svg "$WEB_DIR/public/dashLogo.png"
-cp -f customizations/assets/logo.svg "$WEB_DIR/public/black_logo.png"
-cp -f customizations/assets/logo.svg "$WEB_DIR/public/learnhouse_text_white.png"
+cp -f "$ASSETS_DIR/logo.svg" "$WEB_DIR/public/dashLogo.png"
+cp -f "$ASSETS_DIR/logo.svg" "$WEB_DIR/public/black_logo.png"
+cp -f "$ASSETS_DIR/logo.svg" "$WEB_DIR/public/learnhouse_text_white.png"
 
 # ── 3. Update theme colors in globals.css ───────────────────────────────
 info "Updating theme colors..."
@@ -64,18 +69,17 @@ fi
 # ── 4. Copy CSS overrides ───────────────────────────────────────────────
 info "Copying branding-overrides.css..."
 mkdir -p "$WEB_DIR/styles"
-cp -f customizations/styles/branding-overrides.css "$WEB_DIR/styles/"
+cp -f "$STYLES_DIR/branding-overrides.css" "$WEB_DIR/styles/"
 
 # ── 5. Copy admin components ────────────────────────────────────────────
 info "Copying admin components..."
 mkdir -p "$WEB_DIR/components/Admin/BrandingCustomization"
-cp -f customizations/admin-components/*.tsx "$WEB_DIR/components/Admin/BrandingCustomization/" 2>/dev/null || true
+cp -f "$ADMIN_COMPONENTS_DIR"/*.tsx "$WEB_DIR/components/Admin/BrandingCustomization/" 2>/dev/null || true
 
 # ── 6. Copy custom assets ───────────────────────────────────────────────
 info "Copying custom assets..."
 mkdir -p "$WEB_DIR/public/custom-assets"
-cp -f customizations/assets/* "$WEB_DIR/public/custom-assets/"
-cp -f customizations/widget/ai-chat-widget.js "$WEB_DIR/public/custom-assets/" 2>/dev/null || true
+cp -f "$ASSETS_DIR"/* "$WEB_DIR/public/custom-assets/"
 
 info "DigitalBridge branding applied successfully."
 echo ""
