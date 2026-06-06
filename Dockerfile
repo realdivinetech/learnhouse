@@ -30,7 +30,7 @@ RUN mkdir -p ./apps/web/public && \
     cp -f customizations/assets/logo.svg ./apps/web/public/learnhouse_logo.png && \
     cp -f customizations/assets/logo.svg ./apps/web/public/learnhouse_icon.png && \
     cp -f customizations/assets/logo.svg ./apps/web/public/dashLogo.png && \
-    cp -f customizations/assets/logo.svg ./apps/web/public/black_logo.png && \
+    cp -f customizations/assets/DigitalBridge_ai_black_logo.png ./apps/web/public/black_logo.png && \
     cp -f customizations/assets/logo.svg ./apps/web/public/learnhouse_text_white.png && \
     cp -f customizations/assets/favicon.svg ./apps/web/public/favicon.ico && \
     cp -f customizations/assets/favicon.svg ./apps/web/public/favicon.svg && \
