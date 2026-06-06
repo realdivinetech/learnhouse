@@ -18,26 +18,26 @@ COPY apps/web .
 
 # Copy DigitalBridge customization layer
 COPY customizations/ ./customizations/
-RUN mkdir -p ./apps/web/public && \
-    cp -f customizations/assets/DigitalBridge_bigicon.png ./apps/web/public/learnhouse_bigicon.png && \
-    cp -f customizations/assets/DigitalBridge_bigicon_1.png ./apps/web/public/learnhouse_bigicon_1.png && \
-    cp -f customizations/assets/DigitalBridge_ai_simple.png ./apps/web/public/learnhouse_ai_simple.png && \
-    cp -f customizations/assets/DigitalBridge_ai_simple_colored.png ./apps/web/public/learnhouse_ai_simple_colored.png && \
-    cp -f customizations/assets/DigitalBridge_ai_black_logo.png ./apps/web/public/learnhouse_ai_black_logo.png && \
-    cp -f customizations/assets/logo.svg ./apps/web/public/lrn.svg && \
-    cp -f customizations/assets/logo.svg ./apps/web/public/lrn-dash.svg && \
-    cp -f customizations/assets/logo.svg ./apps/web/public/lrn-text.svg && \
-    cp -f customizations/assets/logo.svg ./apps/web/public/learnhouse_logo.png && \
-    cp -f customizations/assets/logo.svg ./apps/web/public/learnhouse_icon.png && \
-    cp -f customizations/assets/logo.svg ./apps/web/public/dashLogo.png && \
-    cp -f customizations/assets/DigitalBridge_ai_black_logo.png ./apps/web/public/black_logo.png && \
-    cp -f customizations/assets/logo.svg ./apps/web/public/learnhouse_text_white.png && \
-    cp -f customizations/assets/favicon.svg ./apps/web/public/favicon.ico && \
-    cp -f customizations/assets/favicon.svg ./apps/web/public/favicon.svg && \
-    mkdir -p ./apps/web/styles && \
-    cp -f ./customizations/styles/branding-overrides.css ./apps/web/styles/ && \
-    mkdir -p ./apps/web/components/Admin/BrandingCustomization && \
-    cp ./customizations/admin-components/*.tsx ./apps/web/components/Admin/BrandingCustomization/
+RUN mkdir -p ./public && \
+    cp -f customizations/assets/DigitalBridge_bigicon.png ./public/learnhouse_bigicon.png && \
+    cp -f customizations/assets/DigitalBridge_bigicon_1.png ./public/learnhouse_bigicon_1.png && \
+    cp -f customizations/assets/DigitalBridge_ai_simple.png ./public/learnhouse_ai_simple.png && \
+    cp -f customizations/assets/DigitalBridge_ai_simple_colored.png ./public/learnhouse_ai_simple_colored.png && \
+    cp -f customizations/assets/DigitalBridge_ai_black_logo.png ./public/learnhouse_ai_black_logo.png && \
+    cp -f customizations/assets/logo.svg ./public/lrn.svg && \
+    cp -f customizations/assets/logo.svg ./public/lrn-dash.svg && \
+    cp -f customizations/assets/logo.svg ./public/lrn-text.svg && \
+    cp -f customizations/assets/logo.svg ./public/learnhouse_logo.png && \
+    cp -f customizations/assets/logo.svg ./public/learnhouse_icon.png && \
+    cp -f customizations/assets/logo.svg ./public/dashLogo.png && \
+    cp -f customizations/assets/DigitalBridge_ai_black_logo.png ./public/black_logo.png && \
+    cp -f customizations/assets/logo.svg ./public/learnhouse_text_white.png && \
+    cp -f customizations/assets/favicon.svg ./public/favicon.ico && \
+    cp -f customizations/assets/favicon.svg ./public/favicon.svg && \
+    mkdir -p ./styles && \
+    cp -f ./customizations/styles/branding-overrides.css ./styles/ && \
+    mkdir -p ./components/Admin/BrandingCustomization && \
+    cp ./customizations/admin-components/*.tsx ./components/Admin/BrandingCustomization/
 
 # Disable telemetry during build
 ENV NEXT_TELEMETRY_DISABLED=1
