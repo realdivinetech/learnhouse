@@ -79,7 +79,7 @@ export default function AuthBrandingPanel({ org, welcomeText }: AuthBrandingPane
           <div className="login-topbar">
             <Link prefetch href="https://digitalbridge.ng" target="_blank">
               <img
-                src="/lrn.svg"
+                src="/lrn.png"
                 alt="DigitalBridge"
                 width={30}
                 height={30}

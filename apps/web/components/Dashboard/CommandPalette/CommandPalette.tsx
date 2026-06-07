@@ -243,7 +243,7 @@ export default function CommandPalette() {
                 />
               </div>
               <img
-                src="/lrn-dash.svg"
+                src="/lrn-dash.png"
                 alt=""
                 aria-hidden="true"
                 draggable={false}

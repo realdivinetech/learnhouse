@@ -554,7 +554,7 @@ const CopilotMenuButton = ({
 const DigitalBridgeLogo = ({ logoFilter }: { logoFilter: string }) => {
   return (
     <Image
-      src="/lrn-text.svg"
+      src="/lrn-text.png"
       alt="DigitalBridge logo"
       width={133}
       height={40}

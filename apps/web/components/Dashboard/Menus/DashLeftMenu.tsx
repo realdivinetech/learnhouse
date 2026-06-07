@@ -200,7 +200,7 @@ function DashLeftMenu() {
             />
           ) : (
             <img
-              src="/lrn-dash.svg"
+              src="/lrn-dash.png"
               alt="DigitalBridge logo"
               className="h-8 w-8"
             />

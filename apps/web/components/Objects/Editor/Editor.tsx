@@ -579,7 +579,7 @@ const EditorDigitalBridgeLogo = () => {
         transition={animation.transition}
       >
         <Image
-          src="/lrn.svg"
+          src="/lrn.png"
           alt="DigitalBridge"
           width={14}
           height={14}

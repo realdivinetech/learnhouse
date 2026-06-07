@@ -24,9 +24,9 @@ RUN mkdir -p ./public && \
     cp -f customizations/assets/DigitalBridge_ai_simple.png ./public/learnhouse_ai_simple.png && \
     cp -f customizations/assets/DigitalBridge_ai_simple_colored.png ./public/learnhouse_ai_simple_colored.png && \
     cp -f customizations/assets/DigitalBridge_ai_black_logo.png ./public/learnhouse_ai_black_logo.png && \
-    cp -f customizations/assets/DigitalBridge_ai_simple.png ./public/lrn.svg && \
-    cp -f customizations/assets/DigitalBridge_bigicon.png ./public/lrn-dash.svg && \
-    cp -f customizations/assets/DigitalBridge_ai_black_logo.png ./public/lrn-text.svg && \
+    cp -f customizations/assets/DigitalBridge_ai_simple.png ./public/lrn.png && \
+    cp -f customizations/assets/DigitalBridge_bigicon.png ./public/lrn-dash.png && \
+    cp -f customizations/assets/DigitalBridge_ai_black_logo.png ./public/lrn-text.png && \
     cp -f customizations/assets/logo.svg ./public/learnhouse_logo.png && \
     cp -f customizations/assets/logo.svg ./public/learnhouse_icon.png && \
     cp -f customizations/assets/logo.svg ./public/dashLogo.png && \
